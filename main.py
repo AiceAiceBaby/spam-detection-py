@@ -37,7 +37,8 @@ X_train, X_test, y_train, y_test = train_test_split(text_vec, df['spam'], test_s
 classifier = ensemble.GradientBoostingClassifier(
     n_estimators = 100,  #how many decision trees to build
     learning_rate = 0.5, #learning rate
-    max_depth = 6
+    max_depth = 6,
+    loss = "exponential"
 )
 
 
